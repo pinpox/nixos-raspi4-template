@@ -1,7 +1,7 @@
 { config, lib, pkgs, ... }: {
   nixpkgs.localSystem.system = "aarch64-linux";
   imports =
-    [ <nixpkgs/nixos/modules/installer/cd-dvd/sd-image.nix> ./base-config.nix ];
+    [ <nixpkgs/nixos/modules/installer/sd-card/sd-image-aarch64.nix> ./base-config.nix ];
   boot.kernelPackages = pkgs.linuxPackages_rpi4;
   boot.loader.grub.enable = false;
   boot.loader.generic-extlinux-compatible.enable = true;
